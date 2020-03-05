@@ -1,27 +1,58 @@
 <template>
   <div >
+      <link rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
+        crossorigin="anonymous">
       <section class="hero is-primary is-fullwidth is-small">
            <div class="hero-body">
-               <div class="container">
-                  <h1 class="title">
-                     Fitness Tracker For Women
+               <div class="container ">
+                  <h1 class="title is-1">
+                     FITNESS TRACKER
                   </h1>
               </div>
           </div>
      </section>
      <div>
-         <figure>
-             <img src="https://th.bing.com/th/id/OIP.iHFiIQGj92LVORsLgVBhUQHaHa?w=210&h=203&c=7&o=5&dpr=2&pid=1.7" style="width:1400px;height:480px;">
+         <figure style="text-align:center;">
+             <img src="https://th.bing.com/th/id/OIP.MvmBV9GXM-lCbrsgIgoK4QHaK8?w=138&h=192&c=7&o=5&dpr=2&pid=1.7" style="width:500px;height:400px;">
          </figure>
     </div>
-    <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-               <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                  is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-          </p>
-       </div>
+    <footer class="footer ">
+        <div class="tabs is-medium is-fullwidth is-boxed">
+          <ul>
+            <li class="is-active">
+              <a>
+                <span class="icon is-small"><i class="fas fa-tasks" aria-hidden="true"></i></span>
+                <span>TODAY</span>
+             </a>
+           </li>
+           <li >
+              <a>
+                <span class="icon is-small"><i class="fas fa-h-square" aria-hidden="true"></i></span>
+                <span>WORKOUTS</span>
+             </a>
+           </li>
+           <li>
+             <a>
+               <span class="icon is-small"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
+                <span>PROGRAMS</span>
+             </a>
+           </li>
+           <li>
+              <a>
+                <span class="icon is-small"><i class="far fa-spinner" aria-hidden="true"></i></span>
+                <span>PROGRESS</span>
+              </a>
+            </li>
+            <li>
+              <a>
+                <span class="icon is-small"><i class="far fa-user" aria-hidden="true"></i></span>
+                <span>Account</span>
+             </a>
+           </li>
+        </ul>
+     </div>
    </footer>
   </div>
 </template>
@@ -29,6 +60,7 @@
 <style lang="scss">
      @import "~bulma/css/bulma.css"
 </style>
+
 
 // <script>
 // // @ is an alias to /src
