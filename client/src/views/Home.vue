@@ -1,23 +1,26 @@
 <template>
-  <div class="container">
-    <figure class="image is-128x128">
-        <img src="https://tse2.mm.bing.net/th?id=OIP.2uUmassu3J-adt9zMH7CgQHaEK&pid=Api&P=0&w=312&h=176"></img>
-    </figure>
-  </div>  
-</template>
-
-<style lang="scss">
-@import "~bulma/css/bulma.css"
-
-</style>
+   <div> 
+     <nav class="level">
+       <div class="level-left">
+          <p class="level-item title is-2 has-text-centered">
+              <a class="link is-info">My Fitness Tracker</a>
+          </p>
+        </div>  
+        <div class="level-right ">
+           <p class="level-item">
+              <a class="link is-info">Sign Up</a>
+           </p>
+           <p class="level-item ">
+             <a class="link is-info">Log In</a>
+          </p>
+        </div>  
+    </nav>
+  </div>
+</template>  
+//Exporting the page so that other vue modules can access it
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+// @ is an alias
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+  name: 'Home' 
 }
 </script>
