@@ -4,13 +4,14 @@
         href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
         crossorigin="anonymous">
-        <div class="tabs is-medium is-fullwidth is-boxed">
+      <footer class="footer is-small">  
+        <div class="tabs is-fullwidth is-boxed">
           <ul>
             <li class="is-active">
-                <a>
+                <router-link to="/Today">|
                    <span class="icon is-small"><i class="fas fa-tasks" aria-hidden="true"></i></span>
                     <span>TODAY</span>
-                </a>      
+                </router-link>      
             </li>
             <li >
               <a>
@@ -38,5 +39,6 @@
            </li>
         </ul>
      </div>
+    </footer> 
   </div>
 </template>

@@ -6,11 +6,11 @@
               <a class="link is-info">My Fitness Tracker</a>
           </p>
         </div>  
-        <div class="level-right ">
+        <div class="level-right">
            <p class="level-item">
               <a class="link is-info">Sign Up</a>
            </p>
-           <p class="level-item ">
+           <p class="level-item">
              <a class="link is-info">Log In</a>
           </p>
         </div>  

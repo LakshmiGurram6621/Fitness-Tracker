@@ -2,10 +2,11 @@
    <div id="app"> 
         <div id="nav">
           <!-- including home page on the APP module-->
+           <router-view/>
           <router-link to="/"></router-link> |
+          <Mynav></Mynav>   
         </div>  
-        <router-view/> 
-        <Mynav></Mynav>    
+         
    </div>
 </template>   
 <style lang="scss">
