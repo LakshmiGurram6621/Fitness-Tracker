@@ -13,8 +13,8 @@
                     <img src="https://th.bing.com/th/id/OIP.cMlHAfu7UUNVLto6BUmR-QHaKs?w=137&h=189&c=7&o=5&dpr=2&pid=1.7" alt="Placeholder image">
                </figure>
              </div>
-             <div class="media-content">
-                <a>SPEED RUN IN PLACE</a>
+             <div id="databinding" class="media-content">
+                <a v-on:click="greet">SPEED RUN IN PLACE</a>  
              </div>
           </div>
           <div class="media">
@@ -52,8 +52,16 @@
 </template>
 <script>
 // @ is an alias to /src
-
 export default {
-  name: 'Today'
+  name: 'Today',
+  methods: {
+    greet: function (event) {
+      // `this` inside methods points to the Vue instance
+      alert('Hello');
+      // `event` is the native DOM event
+    }
+  }
 }
+
 </script>
+
