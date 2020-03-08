@@ -7,17 +7,17 @@
       <footer class="footer is-small">  
         <div class="tabs is-fullwidth is-boxed">
           <ul>
-            <li class="is-active">
+            <li class="is-active" v-on:click="greet">
                 <router-link to="/Today">|
                    <span class="icon is-small"><i class="fas fa-tasks" aria-hidden="true"></i></span>
                     <span>TODAY</span>
                 </router-link>      
             </li>
             <li >
-              <a>
-                <span class="icon is-small"><i class="fas fa-h-square" aria-hidden="true"></i></span>
-                <span>WORKOUTS</span>
-             </a>
+               <router-link to="/Workouts">
+                  <span class="icon is-small"><i class="fas fa-h-square" aria-hidden="true"></i></span>
+                  <span>WORKOUTS</span>
+              </router-link>
            </li>
            <li>
              <a>
@@ -42,3 +42,17 @@
     </footer> 
   </div>
 </template>
+<script>
+// @ is an alias to /src
+export default {
+  methods: {
+    greet: function (e) {
+      // `this` inside methods points to the Vue instance
+      var elems = document.getElementsByClassName(".router-link-exact-active router-link-active");
+      alert(elems);
+      // `event` is the native DOM event
+    }
+  }
+}
+
+</script>
