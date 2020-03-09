@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Today from '../views/Today.vue'
 import Workouts from '../views/Workouts.vue'
-
+import Popular from '../views/Popular.vue'
 
 //Creating vue object and creating path for every vue module
 Vue.use(VueRouter)
@@ -23,6 +23,11 @@ export default new VueRouter({
         path: '/Workouts',
         name: 'Workouts',
         component: Workouts
+      },
+      {
+        path: '/Popular',
+        name: 'Popular',
+        component: Popular
       }
 
     ]
