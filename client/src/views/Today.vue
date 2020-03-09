@@ -14,7 +14,7 @@
                </figure>
              </div>
              <div id="databinding" class="media-content">
-                <a v-on:click="greet">SPEED RUN IN PLACE</a>  
+                <a v-on:click="speed">SPEED RUN IN PLACE</a>  
              </div>
           </div>
           <div class="media">
@@ -55,7 +55,7 @@
 export default {
   name: 'Today',
   methods: {
-    greet: function (event) {
+    speed: function (event) {
       // `this` inside methods points to the Vue instance
       alert('Hello');
       // `event` is the native DOM event
