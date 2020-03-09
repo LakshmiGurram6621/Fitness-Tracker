@@ -4,14 +4,13 @@
           <!-- including home page on the APP module-->
            <router-view/>
           <router-link to="/"></router-link> |
+          //Including Navigation on the module
           <Mynav></Mynav>   
-        </div>  
-         
+        </div>    
    </div>
 </template>   
-<style lang="scss">
-     @import "~bulma/css/bulma.css"
-</style>
+
+//Importing and exporting the feature so that we can use it in APP module
 <script>
    import Mynav from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/components/Nav.vue";
    export default{

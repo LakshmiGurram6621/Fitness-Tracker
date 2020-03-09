@@ -1,4 +1,5 @@
 <template>
+   <!---Creating Workouts page-->
    <div class="buttons">
      <button class="button"><router-link to="/All">All</router-link></button> 
      <button class="button">My Favorites</button>

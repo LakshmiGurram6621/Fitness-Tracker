@@ -1,9 +1,6 @@
 <template>
+<!-- Creating Navigation Bar for the module-->
   <div >
-      <link rel="stylesheet" 
-        href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
-        crossorigin="anonymous">
       <footer class="footer is-small">  
         <div class="tabs is-fullwidth is-boxed">
           <ul>
@@ -42,13 +39,12 @@
     </footer> 
   </div>
 </template>
+
 <script>
-// @ is an alias to /src
+// Defining Onclick event for the tabs
 export default {
   methods: {
     onClick: function (e) {
-      // `this` inside methods points to the Vue instance
-      // `event` is the native DOM event
         var tabs = document.getElementsByTagName("li");
         for (var i = 0; i < tabs.length; i++) {
               var childClass=tabs[i].childNodes[0].className;
