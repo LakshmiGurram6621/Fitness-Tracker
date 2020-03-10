@@ -4,7 +4,6 @@
           <!-- including home page on the APP module-->
            <router-view/>
           <router-link to="/"></router-link> |
-          //Including Navigation on the module
           <Mynav></Mynav>   
         </div>    
    </div>
