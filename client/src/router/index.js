@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Today from '../views/Today.vue'
 import Plans from '../views/Plans.vue'
+import Availableplans from '../views/Availableplans.vue'
 import Popular from '../views/Popular.vue'
 import Beginner from '../views/Beginner.vue'
 import Yoga from '../views/Yoga.vue'
@@ -27,6 +28,11 @@ export default new VueRouter({
         path: '/Plans',
         name: 'Plans',
         component: Plans
+      },
+      {
+        path: '/Plans/Availableplans',
+        name: 'Availableplans',
+        component: Availableplans
       },
       {
         path: '/Plans/Popular',

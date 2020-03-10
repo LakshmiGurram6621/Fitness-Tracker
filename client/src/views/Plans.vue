@@ -1,10 +1,12 @@
 <template>
-   <!---Creating Workouts page-->
-   <div class="buttons">
-     <button class="button"><router-link to="/Plans/All">All</router-link></button> 
-     <button class="button">My Favorites</button>
-     |<button class="button"><router-link to="/Plans/Popular">Popular</router-link></button>
-     <button class="button"><router-link to="/Plans/Beginner">Beginner</router-link></button>
-     <button class="button"><router-link to="/Plans/Yoga">Yoga</router-link></button>
-   </div>
+  <div class="plans">
+     <div class="container">
+        <div class="notification has-text-centered">
+             <router-link to="/Plans/Availableplans">Available Plans</router-link>
+        </div>
+        <div class="notification has-text-centered">
+             Create Your Own Plans
+        </div>
+     </div>
+  </div>   
 </template>
