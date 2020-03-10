@@ -11,7 +11,7 @@
               <a class="link is-info">Sign Up</a>
            </p>
            <p class="level-item">
-             <a class="link is-info">Log In</a>
+             <a class="link is-info"><router-link to="/Login">Log In</router-link></a>
           </p>
         </div>  
     </nav>

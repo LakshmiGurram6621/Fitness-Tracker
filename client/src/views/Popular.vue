@@ -55,7 +55,7 @@
   </div>
 </template>
 <script>
-   import WorkoutMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Workouts.vue";
+   import WorkoutMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Plans.vue";
    export default{
         components:{
                   WorkoutMenu

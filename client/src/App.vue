@@ -2,7 +2,7 @@
    <div id="app"> 
         <div id="nav">
           <!-- including home page on the APP module-->
-           <router-view/>
+          <router-view/>
           <router-link to="/"></router-link> |
           <Mynav></Mynav>   
         </div>    

@@ -11,16 +11,10 @@
                 </router-link>      
             </li>
             <li v-on:click="onClick">
-               <router-link to="/Workouts">
+               <router-link to="/Plans">
                   <span class="icon is-small"><i class="fas fa-h-square" aria-hidden="true"></i></span>
-                  <span>WORKOUTS</span>
+                  <span>PLANS</span>
               </router-link>
-           </li>
-           <li v-on:click="onClick"> 
-             <a>
-               <span class="icon is-small"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
-                <span>PROGRAMS</span>
-             </a>
            </li>
            <li v-on:click="onClick">
               <a>
