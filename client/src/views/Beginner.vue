@@ -1,6 +1,6 @@
 <template>
   <div> 
-  <WorkoutMenu></WorkoutMenu>
+  <AvailableplansMenu></AvailableplansMenu>
   <section class="hero" >
         <div class="hero-body container image is-256x256" style = "background: url('https://th.bing.com/th/id/OIP.uLm7nPcXSZBIkaUzf_lhLAHaHa?w=141&h=166&c=7&o=5&dpr=2&pid=1.7') no-repeat right;background-size: contain;width:100%">     
             <div class="container">
@@ -55,10 +55,10 @@
 </div>
 </template>
 <script>
-   import WorkoutMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Plans.vue";
+   import AvailableplansMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Availableplans.vue";
    export default{
         components:{
-                  WorkoutMenu
+                  AvailableplansMenu
       }
    }
 </script>

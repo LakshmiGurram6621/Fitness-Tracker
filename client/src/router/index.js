@@ -7,7 +7,6 @@ import Availableplans from '../views/Availableplans.vue'
 import Popular from '../views/Popular.vue'
 import Beginner from '../views/Beginner.vue'
 import Yoga from '../views/Yoga.vue'
-import All from '../views/All.vue'
 import Login from '../views/Login.vue'
 
 //Creating vue object and creating path for every vue module
@@ -50,17 +49,9 @@ export default new VueRouter({
         component: Yoga
       },
       {
-        path: '/Plans/All',
-        name: 'All',
-        component: All
-      },
-      {
         path: '/Login',
         name: 'Login',
         component: Login
       }
-
-
-
     ]
 })
