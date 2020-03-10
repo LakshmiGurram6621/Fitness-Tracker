@@ -7,7 +7,7 @@
     </div>
     <div class="columns"> 
         <div class="column hero is-link is-medium has-text-centered">
-            <a>Create Workout</a>
+            <router-link to="/Plans/Createworkout">Create Workout</router-link>
         </div>
         <div class="column hero is-info is-medium has-text-centered">
             <a>Workout History</a>

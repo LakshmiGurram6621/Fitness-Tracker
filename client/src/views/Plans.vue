@@ -5,7 +5,7 @@
              <router-link to="/Plans/Availableplans">Available Plans</router-link>
         </div>
         <div class="notification has-text-centered">
-             Create Your Own Workout
+             <router-link to="/Plans/Createworkout">Create Your Own Workout</router-link>
         </div>
      </div>
   </div>   
