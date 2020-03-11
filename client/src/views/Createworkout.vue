@@ -3,7 +3,9 @@
      <nav class="level">
         <p class="level-item has-text-centered">
            <span class="icon is-small"><i class="fa fa-chevron-left" aria-hidden="true"></i></span> 
-           <span>Back</span>
+           <router-link to="/Today">
+               <span>Back</span>
+           </router-link>    
         </p>
         <p class="level-item has-text-centered">
             Create Workout
