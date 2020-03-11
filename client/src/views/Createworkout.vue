@@ -9,7 +9,9 @@
             Create Workout
         </p>
         <p class="level-item has-text-centered">
-            <span class="icon is-small"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+           <router-link to="/Createworkout/Addworkout">
+              <span class="icon is-small"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+           </router-link>   
         </p>
       </nav>
    </div>

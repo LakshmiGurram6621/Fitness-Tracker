@@ -9,6 +9,8 @@ import Popular from '../views/Popular.vue'
 import Beginner from '../views/Beginner.vue'
 import Yoga from '../views/Yoga.vue'
 import Login from '../views/Login.vue'
+import Addworkout from '../views/Addworkout.vue'
+
 
 //Creating vue object and creating path for every vue module
 Vue.use(VueRouter)
@@ -58,6 +60,11 @@ export default new VueRouter({
         path: '/Login',
         name: 'Login',
         component: Login
+      },
+      {
+        path: '/Createworkout/Addworkout',
+        name: 'Addworkout',
+        component: Addworkout
       }
     ]
 })
