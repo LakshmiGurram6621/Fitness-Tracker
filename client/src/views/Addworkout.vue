@@ -32,7 +32,7 @@
 
 <script>
   import createworkoutMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Createworkout.vue"
-  export default{
+  export default {
       props: {
             exercise: '',
             time: '',

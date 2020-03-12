@@ -1,7 +1,7 @@
 <template>
 <div>
-   <h2>this is start workout page</h2>
-   <p>time is {{time}} fghh</p>
+   <h2>Your Created workouts will be added here</h2>
+   <p>time is {{time}}</p>
 </div>  
 </template>
 <script>
@@ -11,9 +11,8 @@
                 addworkoutpage
         },
         data() {
-           return {
-               time:this.time
-       }
+          
+               time
      }
    
  }
