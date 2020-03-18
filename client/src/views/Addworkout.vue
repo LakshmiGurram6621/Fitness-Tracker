@@ -4,8 +4,8 @@
       <div class="field">
          <label class="label">Exercise Name</label>
          <div class="control">
-           <input class="input is-primary column is-5" v-model="exercise" type="text" placeholder="Exercise Name">
-           <p>message is :{{exercise}}</p>
+            <input class="input is-primary column is-5" v-model="addexercise" type="text" placeholder="Exercise Name">
+            <p>message is {{addexercise}}</p>
          </div>
       </div>
       <br>
@@ -24,23 +24,38 @@
          </div>
      </div> 
      <div class="buttons">
-          <router-link to="/Today/Startworkout"><button class="button is-primary" >Add</button></router-link>
+          <button class="button is-primary" @click="addData">Add</button>
           <button class="button is-link" >Cancel</button>
     </div>
   </div>    
 </template>
-
 <script>
+  import {mapState,mapMutations} from 'vuex'
   import createworkoutMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Createworkout.vue"
   export default {
-      props: {
-            exercise: '',
-            time: '',
-            calories:''
+      computed : {
+             ...mapState([
+          'exercise'
+         ]),
+      },
+      data(){
+        return{
+                addexercise:'',
+                time:'',
+                calories:'',
+        }
       },
       components:{
           createworkoutMenu
-      }    
+      },
+      methods:{
+          ...mapMutations([
+            'ADD_Data'
+          ]),
+          addData:function(){
+            this.ADD_Data(this.addexercise);
+            this.addexercise='';
+          }
+      }
   } 
-  
 </script>

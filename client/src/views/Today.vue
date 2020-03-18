@@ -2,7 +2,7 @@
   <div class="today">
     <div class="columns">
         <div class="column hero is-primary is-full is-medium has-text-centered">
-             <a>Start Workout</a>
+             <router-link to="/Today/Startworkout"><a>Start Workout</a></router-link>
         </div>
     </div>
     <div class="columns"> 
