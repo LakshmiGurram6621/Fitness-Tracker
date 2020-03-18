@@ -5,7 +5,6 @@
          <label class="label">Exercise Name</label>
          <div class="control">
             <input class="input is-primary column is-5" v-model="addexercise" @change="addExercise(addexercise)" placeholder="Exercise Name">
-            <p>message is {{addexercise}}</p>
          </div>
       </div>
       <br>
@@ -13,14 +12,12 @@
          <label class="label">Time To Spent</label>
          <div class="control">
            <input class="input is-primary column is-5" v-model="addtime" @change="addTime(addtime)" placeholder="Duration of the time to spent on the exercise">
-           <p>message is :{{addtime}}</p>
          </div>
       </div>
      <div class="field">
          <label class="label">Calories</label>
          <div class="control">
            <input class="input is-primary column is-5" v-model="addcalories" @change="addCalories(addcalories)" placeholder="Calories to burn">
-           <p>message is :{{addcalories}}</p>
          </div>
      </div> 
      <div class="buttons">
