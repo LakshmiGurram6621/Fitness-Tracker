@@ -35,6 +35,12 @@ export default new Vuex.Store({
     },
     DELETE_Excercise:(state,addexercise)=>{
         state.exercise.pop();
+    },
+    DELETE_Time:(state,addtime)=>{
+        state.time.pop();
+    },
+    DELETE_Calories:(state,addcalories)=>{
+        state.calories.pop();
     }
  },
  actions: {}

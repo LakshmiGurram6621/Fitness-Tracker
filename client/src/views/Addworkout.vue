@@ -50,7 +50,7 @@
       },
       methods:{
           ...mapMutations([
-            'ADD_Time','ADD_Excercise','ADD_Calories','DELETE_Excercise'
+            'ADD_Time','ADD_Excercise','ADD_Calories','DELETE_Excercise','DELETE_Time','DELETE_Calories'
           ]),
           addTime:function(){
             this.ADD_Time(this.addtime);
@@ -71,7 +71,11 @@
           },
           deleteData:function(){
              this.DELETE_Excercise(this.addexercise);
-
+             this.DELETE_Time(this.addtime);
+             this.DELETE_Calories(this.addcalories);
+             this.addtime=''; 
+             this.addexercise='';
+             this.addcalories='';
           }
       }
   } 
