@@ -4,7 +4,7 @@
       <div class="field">
          <label class="label">Exercise Name</label>
          <div class="control">
-            <input class="input is-primary column is-5" v-model="addexercise" type="text" placeholder="Exercise Name">
+            <input class="input is-primary column is-5" v-model="addexercise" @change="addExercise(addexercise)" placeholder="Exercise Name">
             <p>message is {{addexercise}}</p>
          </div>
       </div>
@@ -12,20 +12,20 @@
       <div class="field">
          <label class="label">Time To Spent</label>
          <div class="control">
-           <input class="input is-primary column is-5" v-model="time" type="text" placeholder="Duration of the time to spent on the exercise">
-           <p>message is :{{time}}</p>
+           <input class="input is-primary column is-5" v-model="addtime" @change="addTime(addtime)" placeholder="Duration of the time to spent on the exercise">
+           <p>message is :{{addtime}}</p>
          </div>
       </div>
      <div class="field">
          <label class="label">Calories</label>
          <div class="control">
-           <input class="input is-primary column is-5" v-model="calories" type="text" placeholder="Calories to burn">
-           <p>message is :{{calories}}</p>
+           <input class="input is-primary column is-5" v-model="addcalories" @change="addCalories(addcalories)" placeholder="Calories to burn">
+           <p>message is :{{addcalories}}</p>
          </div>
      </div> 
      <div class="buttons">
           <button class="button is-primary" @click="addData">Add</button>
-          <button class="button is-link" >Cancel</button>
+          <button class="button is-link" @click="deleteData">Cancel</button>
     </div>
   </div>    
 </template>
@@ -35,14 +35,14 @@
   export default {
       computed : {
              ...mapState([
-          'exercise'
+          'exercise','time','calories'
          ]),
       },
       data(){
         return{
                 addexercise:'',
-                time:'',
-                calories:'',
+                addtime:'',
+                addcalories:'',
         }
       },
       components:{
@@ -50,11 +50,28 @@
       },
       methods:{
           ...mapMutations([
-            'ADD_Data'
+            'ADD_Time','ADD_Excercise','ADD_Calories','DELETE_Excercise'
           ]),
+          addTime:function(){
+            this.ADD_Time(this.addtime);
+            
+          },
+          addExercise:function(event){
+             this.ADD_Excercise(this.addexercise);
+                 
+          },
+          addCalories:function(event){
+              this.ADD_Calories(this.addcalories);
+                 
+          },
           addData:function(){
-            this.ADD_Data(this.addexercise);
-            this.addexercise='';
+             this.addtime=''; 
+             this.addexercise='';
+             this.addcalories='';
+          },
+          deleteData:function(){
+             this.DELETE_Excercise(this.addexercise);
+
           }
       }
   } 

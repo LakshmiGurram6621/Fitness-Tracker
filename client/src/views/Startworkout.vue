@@ -3,9 +3,15 @@
    <h2>Your Created workouts will be added here</h2>
    <p>{{displayExercise}} </p>
    <ul>
-       <li v-for="(l,i) in exercise" v-bind:key="i">
-           {{l}}
-       </li>   
+       <li v-for="(list,index) in exercise" v-bind:key="index">
+          <p>Exercise Name {{list}}</p>
+       </li> 
+       <li v-for="(list,index) in time" v-bind:key="index">
+          <p>Time Spent is {{list}}</p>
+       </li> 
+       <li v-for="(list,index) in calories" v-bind:key="index">
+          <p>Calories burn  {{list}}</p>
+       </li> 
    </ul>    
 </div>  
 </template>
@@ -18,7 +24,7 @@
                'displayExercise'
           ]),
           ...mapState([
-          'exercise'
+          'exercise','time','calories'
          ]),
         },
         components: {

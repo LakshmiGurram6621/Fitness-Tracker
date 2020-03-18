@@ -7,6 +7,12 @@ export default new Vuex.Store({
  state: {
      exercise:[
 
+     ],
+     time:[
+
+     ],
+     calories:[
+
      ]
  },
  getters: {
@@ -15,9 +21,21 @@ export default new Vuex.Store({
      }
  },
  mutations: {
-     ADD_Data:(state,addexercise) =>{
-              state.exercise.push(addexercise)
-     }
+    ADD_Time:(state,addtime) =>{
+        console.log(addtime);
+        state.time.push(addtime);
+    },
+    ADD_Excercise:(state,addexercise) =>{
+        console.log(addexercise);
+        state.exercise.push(addexercise);
+    },
+    ADD_Calories:(state,addCalories) =>{
+        console.log(addCalories);
+        state.calories.push(addCalories);
+    },
+    DELETE_Excercise:(state,addexercise)=>{
+        state.exercise.pop();
+    }
  },
  actions: {}
 });
