@@ -1,7 +1,7 @@
 <template>
 <!-- Creating Navigation Bar for the module-->
   <div >
-      <footer class="footer is-small">  
+      <footer class="footer is-small" id="footer">  
         <div class="tabs is-fullwidth is-boxed">
           <ul>
             <li  v-on:click="onClick">
@@ -58,3 +58,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+#footer {
+    position: fixed;
+    height: 50px;
+    background-color:lightgray;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+</style>

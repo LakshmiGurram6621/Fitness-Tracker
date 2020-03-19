@@ -1,23 +1,10 @@
 <template>
-<div>
+<div> 
+   <createworkout></createworkout>
+   <br>
    <h2>Your Created Workouts Will be Added Here</h2>
    <br>
    <p>You Have Created {{displayExercise}} Exercises</p>
-   <br>
-   <div>
-   <ul>
-       <li v-for="(list,index) in exercise" v-bind:key="index">
-          <p>Exercise Name {{list}}</p>
-       </li> 
-       <li v-for="(list,index) in time" v-bind:key="index">
-          <p>Time Spent is {{list}}</p>
-       </li> 
-       <li v-for="(list,index) in calories" v-bind:key="index">
-          <p>Calories burn  {{list}}</p>
-       </li> 
-   </ul>  
-   </div>  
-
    <br>
    <table class="table">
   <thead>
@@ -43,6 +30,7 @@
 <script>
     import addworkoutpage from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Addworkout.vue"
     import {mapGetters,mapState,mapMutations} from 'vuex'
+    import createworkout from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Createworkout.vue"
     export default{
         computed: {
             ...mapGetters([
@@ -53,7 +41,7 @@
          ]),
         },
         components: {
-                addworkoutpage
+                addworkoutpage,createworkout
         }
  }
 </script>
