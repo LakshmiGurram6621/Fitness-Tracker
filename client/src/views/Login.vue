@@ -1,8 +1,11 @@
 <template>
-  <form class="container" >
+  <form class="container form-down" >
+      <div class="title is-4">
+        <p>Please Login with your credentials</p>
+      </div>  
       <div class="field">
         <p class="control has-icons-left has-icons-right">
-            <input class="input" type="email" >
+            <input class="input" type="email" placeholder="Email address">
             <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
             </span>
@@ -28,6 +31,11 @@
         </div>
   </form>
 </template>
+<style scoped>
+  .form-down{
+      margin-top: 20px;
+  }
+</style>
 
 
 

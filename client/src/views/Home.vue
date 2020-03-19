@@ -6,7 +6,7 @@
               <a class="link is-info">My Fitness Tracker</a>
           </p>
         </div>  
-        <div class="level-right">
+        <div class="level-right right-content">
            <p class="level-item">
               <a class="link is-info">Sign Up</a>
            </p>
@@ -24,3 +24,8 @@ export default {
   name: 'Home' 
 }
 </script>
+<style scoped>
+    .right-content{
+        margin-right: 20px;
+    }
+</style>

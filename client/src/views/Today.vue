@@ -1,5 +1,5 @@
 <template>
-  <div class="today">
+  <div class="today form-down">
     <div class="columns">
         <div class="column hero is-primary is-full is-medium has-text-centered">
              <router-link to="/Today/Startworkout"><a>Start Workout</a></router-link>
@@ -15,3 +15,8 @@
     </div>
   </div> 
 </template>
+<style scoped>
+  .form-down{
+      margin-top: 10px;
+  }
+</style>

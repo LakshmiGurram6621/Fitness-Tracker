@@ -1,7 +1,7 @@
 <template>
    <div> 
       <AvailableplansMenu></AvailableplansMenu>
-      <div class="card">
+      <div class="card scroller">
        <article class="message is-info">
            <div class="message-body">
                Below are the Today's workouts suggested by GYM instructors
@@ -62,3 +62,11 @@
       }
    }
 </script>
+<style scoped>
+ .scroller {
+            overflow:scroll;
+            width :1250px;
+            height: 650px;      
+}
+</style>
+
