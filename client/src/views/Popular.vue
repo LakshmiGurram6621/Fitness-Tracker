@@ -59,6 +59,25 @@
    export default{
         components:{
                   AvailableplansMenu
+      },
+      methods:{
+           speed: function (e){
+              console.log("is callinf");
+              /* var x = document.createElement("VIDEO");
+             // x.setAttribute("src","https://www.youtube.com/watch?v=V8_wEZD160g");
+              if (x.canPlayType("video/mp4")) {
+                      x.setAttribute("src","https://www.youtube.com/watch?v=V8_wEZD160g");
+              } else {
+                     x.setAttribute("src","movie.ogg");
+              } 
+
+              x.setAttribute("width", "620");
+              x.setAttribute("height", "240");
+              x.setAttribute("controls", "controls");
+              x.autoPlay = true;
+              document.body.appendChild(x); */
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/ml6cT4AZdqI" frameborder="0" allow="accelerometer; autoplay;"></iframe>
+           }
       }
    }
 </script>
