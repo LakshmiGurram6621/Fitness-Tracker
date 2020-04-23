@@ -1,11 +1,11 @@
 <template>
-  <form class="container form-down" >
+  <form class="container form-down" @submit.prevent="login">
       <div class="title is-4">
         <p>Please Login with your credentials</p>
       </div>  
       <div class="field">
         <p class="control has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="Email address">
+            <input class="input" type="email" placeholder="Email address" v-model="email">
             <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
             </span>
@@ -31,6 +31,30 @@
         </div>
   </form>
 </template>
+<script>
+import { Login } from "../models/Users";
+
+export default {
+    data(){
+        return {
+            email:'',
+            error: ''
+        }
+    },
+    methods: {
+        async login(){
+            try {
+                console.log(this.email);
+                await Login(this.email);
+                console.log("coimjhggfff");
+                this.$router.push('/Today');
+            } catch (error) {
+                this.error = error;
+            }
+        }
+    }
+}
+</script>
 <style scoped>
   .form-down{
       margin-top: 20px;
