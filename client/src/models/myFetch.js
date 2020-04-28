@@ -2,7 +2,7 @@
 */
 const api_root = "http://localhost:3000";
 let result;
-export default async function myFetch(url, data){
+async function myFetch(url, data){
     console.log(url);
     console.log(data);
     let response;
@@ -27,5 +27,18 @@ export default async function myFetch(url, data){
             return result;
         })
         return result;
-    }
+    } 
 }
+ async function myUpdate(url){
+    console.log(url);
+    let response;
+    //const headers = { authorization: "bearer " + User.UserId  }
+    //if(data){
+        console.log(api_root + url);
+        console.log("Update method is calling");
+        await fetch(api_root + url, {
+            method: 'PUT', // *GET, POST, PUT, DELETE, etc.  
+        })
+   // }    
+}
+export {myFetch,myUpdate};

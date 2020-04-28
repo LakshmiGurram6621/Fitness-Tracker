@@ -8,7 +8,7 @@
         </div>  
         <div class="level-right right-content">
            <p class="level-item">
-              <a class="link is-info">Sign Up</a>
+              <a class="link is-info"><router-link to="/SignUp">Sign Up</router-link></a>
            </p>
            <p class="level-item">
              <a class="link is-info"><router-link to="/Login">Log In</router-link></a>
