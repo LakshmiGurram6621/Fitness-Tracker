@@ -33,7 +33,7 @@
 </template>
 <script>
 import { Login } from "../models/Users";
-
+import {mapState,mapMutations} from 'vuex'
 export default {
     data(){
         return {
@@ -47,6 +47,8 @@ export default {
                 console.log(this.email);
                 await Login(this.email);
                 console.log("coimjhggfff");
+                this.$store.state.user=this.email;
+                //console.log("Inside addrees is"+this.$store.state.user);
                 this.$router.push('/Today');
             } catch (error) {
                 this.error = error;

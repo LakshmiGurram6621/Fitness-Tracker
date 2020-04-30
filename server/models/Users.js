@@ -20,17 +20,20 @@ router
         }
             
     })    
-    .put('/login/:Name,:Email,:Password',(req,res)=>{
-        Newuser={
-            'Name':req.params.Name,
-            'Password':req.params.Password,
-            'Email':req.params.Email
+    .post('/login/:Name,:Email,:Password',(req,res)=>{
+        res.send(req.params);
+        if(req.params.User==null){
+            Newuser={
+                'Name':req.params.Name,
+                'Password':req.params.Password,
+                'Email':req.params.Email
+            }
+            console.log("function is calling1");
+            const data = JSON.stringify(Newuser);
+            Users.push(Newuser);
+            fs.writeFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt',JSON.stringify(Users));
+            res.send(Users);
         }
-        console.log("function is calling1");
-        const data = JSON.stringify(Newuser);
-        Users.push(Newuser);
-        fs.writeFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt',JSON.stringify(Users));
-        res.send(Users);
         // write JSON string to a file
         // fs.readFile('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt', function (err, data) {
         //     var json = JSON.parse(data)
@@ -38,9 +41,6 @@ router
         
         //     fs.writeFile("/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt", JSON.stringify(json))
         // })
-
-
-
         // let fd;
         // try {
         //     //fd = fs.openSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt', 'a');
@@ -52,7 +52,6 @@ router
         // }
         //res.send(Users);
     })  
-
 module.exports = router
 function Login(Email){
     const found=Users.some(user=>user.Email === Email);

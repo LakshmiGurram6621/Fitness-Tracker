@@ -37,7 +37,7 @@ async function myFetch(url, data){
         console.log(api_root + url);
         console.log("Update method is calling");
         await fetch(api_root + url, {
-            method: 'PUT', // *GET, POST, PUT, DELETE, etc.  
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.  
         })
    // }    
 }

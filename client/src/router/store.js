@@ -13,6 +13,9 @@ export default new Vuex.Store({
      ],
      calories:[
 
+     ],
+     user:[
+         
      ]
  },
  getters: {
