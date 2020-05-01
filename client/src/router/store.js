@@ -16,7 +16,10 @@ export default new Vuex.Store({
      ],
      user:[
          
-     ]
+     ],
+     EXERCISE:[
+
+     ],
  },
  getters: {
      displayExercise: state =>{
