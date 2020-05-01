@@ -50,11 +50,11 @@
                async addExercise() {
                   console.log("Hello");
                   try {
-                      console.log(this.exercise);
-                      console.log(this.time);
-                      console.log(this.calories);
+                      console.log(this.exercise[0]);
+                      console.log(this.time[0]);
+                      console.log(this.calories[0]);
                       console.log("Inside addrees is"+this.$store.state.user);
-                      await updateUserExercise(this.exercise,this.time,this.calories,this.$store.state.user);
+                      await updateUserExercise(this.exercise[0],this.time[0],this.calories[0],this.$store.state.user);
                       //console.log("coming here");
                      // alert("Your registration is succeessful please login");
                      //this.$router.push('/Login');

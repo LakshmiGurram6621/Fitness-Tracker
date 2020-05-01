@@ -5,6 +5,7 @@ import Today from '../views/Today.vue'
 import Plans from '../views/Plans.vue'
 import Availableplans from '../views/Availableplans.vue'
 import Createworkout from '../views/Createworkout.vue'
+import Workouthistory from '../views/Workouthistory.vue'
 import Popular from '../views/Popular.vue'
 import Beginner from '../views/Beginner.vue'
 import Yoga from '../views/Yoga.vue'
@@ -46,6 +47,11 @@ export default new VueRouter({
         path: '/Plans/Createworkout',
         name: 'Createworkout',
         component: Createworkout
+      },
+      {
+        path: '/Plans/Workouthistory',
+        name: 'Workouthistory',
+        component: Workouthistory
       },
       {
         path: '/Plans/Popular',

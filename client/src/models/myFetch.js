@@ -41,4 +41,16 @@ async function myFetch(url, data){
         })
    // }    
 }
-export {myFetch,myUpdate};
+async function myExercise(url){
+    console.log(url);
+    let response;
+    //const headers = { authorization: "bearer " + User.UserId  }
+    //if(data){
+        console.log(api_root + url);
+        console.log("My Exercise method is calling");
+        await fetch(api_root + url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.  
+        })
+   // }    
+}
+export {myFetch,myUpdate,myExercise};

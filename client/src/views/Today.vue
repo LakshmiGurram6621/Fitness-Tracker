@@ -10,7 +10,7 @@
             <router-link to="/Plans/Createworkout">Create Workout</router-link>
         </div>
         <div class="column hero is-info is-medium has-text-centered">
-            <a>Workout History</a>
+            <router-link to="/Plans/Workouthistory">Workout History</router-link>
         </div>
     </div>
   </div> 
