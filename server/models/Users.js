@@ -4,8 +4,6 @@ const router = express.Router();
 let rawdata = fs.readFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt');
 const Users = JSON.parse(rawdata);
 
-//const Users=JSON.parse(fs.readFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt', 'utf8'));
-
 router
     .post('/login', (req, res) => {
         res.send(Users);
@@ -34,7 +32,6 @@ router
 module.exports = router
 function Login(Email){
     const found=Users.some(user=>user.Email === Email);
-    //console.log(found);
     if(found){
         const user=Users.filter(user=>user.Email === Email);
         return user;

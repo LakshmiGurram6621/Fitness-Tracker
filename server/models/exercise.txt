@@ -1,1 +1,1 @@
-[{"user":{"Email":"x@gmail.com"},"exercise":{"exercise0":{"Exercise":"yoga1","Time":"10","Calories":"20","Date":"ThuApr30"}}},{"user":{"Email":"30,30,40,alex@gmail.com"},"exercise":{"exercise0":{"Exercise":"yoga","Time":"swimming","Calories":"20","Date":"ThuApr30"},"exercise1":{"Exercise":"yoga","Time":"swimming","Calories":"20","Date":"ThuApr30"}}},{"user":{"Email":"alex@gmail.com"},"exercise":{"exercise0":{"Exercise":"yoga","Time":"10","Calories":"20","Date":"ThuApr30"}}}]
+[]

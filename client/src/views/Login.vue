@@ -45,11 +45,17 @@ export default {
         async login(){
             try {
                 console.log(this.email);
-                await Login(this.email);
+                const user=await Login(this.email);
                 console.log("coimjhggfff");
-                this.$store.state.user=this.email;
-                //console.log("Inside addrees is"+this.$store.state.user);
-                this.$router.push('/Today');
+                console.log(user);
+                if(user!=null){
+                   this.$store.state.user=this.email;
+                   this.$router.push('/Today');
+                }else{
+                    alert("Sorry,You don't have the account to login,Please Sign up");
+                    this.$router.push('/SignUp');
+                }
+                
             } catch (error) {
                 this.error = error;
             }

@@ -8,7 +8,7 @@
        </div>
 
       <div class="field">
-         <label class="label">Email</label>
+         <label class="label">Email*</label>
          <div class="control has-icons-left has-icons-right">
            <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com" v-model="email">
            <span class="icon is-small is-left">
@@ -20,7 +20,7 @@
         </div>
      </div>
      <div class="field">
-        <label class="label">Password</label> 
+        <label class="label">Password*</label> 
         <p class="control has-icons-left">
             <input class="input" type="password" placeholder="Password" v-model="password">
             <span class="icon is-small is-left">
@@ -55,10 +55,14 @@ export default {
                 console.log(this.name);
                 console.log(this.email);
                 console.log(this.password);
-                await Signup(this.name,this.email,this.password);
-                console.log("coming here");
-                alert("Your registration is succeessful please login");
-                this.$router.push('/Login');
+                if(!this.name ||!this.email||!this.password){
+                  alert("All * Fields are mandatory");
+                }else{
+                  await Signup(this.name,this.email,this.password);
+                  console.log("coming here");
+                  alert("Your registration is succeessful please login");
+                  this.$router.push('/Login');
+                }
             } catch (error) {
                 this.error = error;
             }

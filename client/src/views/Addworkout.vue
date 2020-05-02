@@ -2,20 +2,20 @@
   <div id="addworkout">
       <createworkoutMenu></createworkoutMenu>
       <div class="field">
-         <label class="label">Exercise Name</label>
+         <label class="label">Exercise Name*</label>
          <div class="control">
             <input class="input is-primary column is-5" v-model="addexercise" @change="addExercise(addexercise)" placeholder="Exercise Name">
          </div>
       </div>
       <br>
       <div class="field">
-         <label class="label">Time To Spent</label>
+         <label class="label">Time To Spent*</label>
          <div class="control">
-           <input class="input is-primary column is-5" v-model="addtime" @change="addTime(addtime)" placeholder="Duration of the time to spent on the exercise">
+           <input class="input is-primary column is-5" type="text" v-model="addtime" @change="addTime(addtime)" placeholder="Duration of the time to spent on the exercise">
          </div>
       </div>
      <div class="field">
-         <label class="label">Calories</label>
+         <label class="label">Calories*</label>
          <div class="control">
            <input class="input is-primary column is-5" v-model="addcalories" @change="addCalories(addcalories)" placeholder="Calories to burn">
          </div>
@@ -62,9 +62,14 @@
                  
           },
           addData:function(){
-             this.addtime=''; 
-             this.addexercise='';
-             this.addcalories='';
+            if(!this.addtime || !this.addexercise || !this.addcalories){
+                alert("All * fields are mandatory");
+            }else{
+                alert("Your planning to start your created exercise,please naviage to Start Work Out Page");
+                this.addtime=''; 
+                this.addexercise='';
+                this.addcalories='';
+            }
           },
           deleteData:function(){
              this.DELETE_Excercise(this.addexercise);

@@ -1,52 +1,38 @@
 <template>
-    <h1>this is workout history page {{exercise}}{{id}}</h1>
-    
+    <div class="content">
+    <ul id="exercise">
+       <li v-if="exercise && !currentUser"> You have to be a registered user to view your work history</li>
+       <li v-if="currentUser && exercise">you have not yet started any workouts,please go to start worlout page</li>
+       <li v-for="value in exercise">
+         {{value[0]}}{{value[1]}}
+       </li>
+    </ul>
+</div>
 </template>
 <script>
 import { fetchExercise } from "../models/FetchExercise";
 let finalreuslt={};
 export default {
-    name: 'HelloWorld',
     data () {
         return {
                 id: "",
-                exercise:"",
+                exercise:{},
+                currentUser:"",
                 }
             },   
     created: function(){
-        this.fetchExercise().then(data=>{
-            console.log("data is"+data);
-            finalreuslt=data;
-            //this.id=result.Exercise;
-            //console.log("Id is"+finalreuslt.Exercise);
-        })
+        this.currentUser=this.$store.state.user;
+        console.log(currentUser);
+        this.fetchExercise();
     },   
-    mounted: function(){
-           console.log("Mounted function is calling"+finalreuslt);
-    },   
-    updated: function(){
-           console.log("updated function is calling"+finalreuslt); 
-           console.log(this.id);
-    },
     methods:{
         async fetchExercise(){
             try {
-                console.log(this.$store.state.user);
-                const result=await fetchExercise(this.$store.state.user);
-                console.log("Here result issss"+result[0]);
-                this.exercise=result[0];
-                this.id=result[1];
-                console.log(this.id);
-                //console.log(result.Exercise);
-                finalreuslt=result;
-                return result;
-                //return finalreuslt;
-                // console.log(user);
-                // console.log(result[0].exercise);
-                // console.log(result[0].exercise.exercise0);
-                // console.log(Object.keys(result[0].exercise).length);
-                //console.log(result[0].exercise.length);
-                //this.$router.push('/Today');
+                console.log("user is"+this.$store.state.user);   
+                finalreuslt=await fetchExercise(this.$store.state.user);
+                console.log("Here result issss"+parseInt(finalreuslt[0]));
+                this.exercise=finalreuslt;
+                
             } catch (error) {
                 this.error = error;
             }

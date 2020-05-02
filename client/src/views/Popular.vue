@@ -70,7 +70,6 @@
               } else {
                      x.setAttribute("src","movie.ogg");
               } 
-
               x.setAttribute("width", "620");
               x.setAttribute("height", "240");
               x.setAttribute("controls", "controls");

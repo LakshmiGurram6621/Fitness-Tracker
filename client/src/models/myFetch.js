@@ -2,13 +2,12 @@
 */
 const api_root = "http://localhost:3000";
 let result;
-let Exercise,Time;
+const Exercise=[];
+const Time=[];
 async function myFetch(url, data){
     console.log(url);
     console.log(data);
     let response;
-    //const headers = { authorization: "bearer " + User.UserId  }
-
     if(data){
         console.log(api_root + url);
         await fetch(api_root + url, {
@@ -22,7 +21,6 @@ async function myFetch(url, data){
             for (var i = 0; i < response.length; i++) {
                 console.log(response[i].Name);
                 result =response[i].Name;
-                //console.log(res[i].userId);
             }
             console.log("result is"+result);
             return result;
@@ -33,26 +31,21 @@ async function myFetch(url, data){
  async function myUpdate(url){
     console.log(url);
     let response;
-    //const headers = { authorization: "bearer " + User.UserId  }
-    //if(data){
         console.log(api_root + url);
         console.log("Update method is calling");
         await fetch(api_root + url, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.  
         })
-   // }    
+      
 }
 async function myExercise(url){
     console.log(url);
     let response;
-    //const headers = { authorization: "bearer " + User.UserId  }
-    //if(data){
         console.log(api_root + url);
         console.log("My Exercise method is calling");
         await fetch(api_root + url, {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.  
-        })
-   // }    
+        })   
 }
 async function getExercise(url){
     console.log(url);
@@ -65,23 +58,18 @@ async function getExercise(url){
             return res.json()
           })
         .then((response) => {
-            //const res=JSON.stringify(response);
             console.log('res: ' + JSON.stringify(response));
+            console.log(Object.keys(response[0].exercise).length);
+            const length=Object.keys(response[0].exercise).length;
             //result=JSON.stringify(response);
-            for (var i = 0; i < response.length; i++) {
-                   console.log(response.length);
-                   console.log(i);
-                   console.log("madam "+JSON.stringify(response[i].exercise.exercise0));
-                   Exercise=JSON.stringify(response[i].exercise.exercise0.Exercise);
-                   Time=JSON.stringify(response[i].exercise.exercise0.Time);
-                   //result =response[i].Name;
-                   //console.log(res[i].userId);
+            for (var i = 0; i < length; i++) {
+                   console.log("madam is"+JSON.stringify(response[0].exercise["exercise"+i].Exercise));
+                   Exercise[i]=JSON.stringify(response[0].exercise["exercise"+i].Exercise);
+                   Time[i]=JSON.stringify(response[0].exercise["exercise"+i].Time);
+                   console.log(Exercise);
            }
-        //     console.log("result is"+result);
-        //     return result;
         })
         console.log("Exercise is"+Exercise);
-        console.log("Time is"+Time);
     return [Exercise,Time];
 } 
 export {myFetch,myUpdate,myExercise,getExercise};
