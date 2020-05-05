@@ -22,7 +22,7 @@
       <th>{{exercise[index-1]}}</th>
       <td>{{time[index-1]}}</td>
       <td>{{calories[index-1]}}</td>
-      <td><input class="button is-small is-link is-light" type="submit" value="ADD" v-on:click = "addExercise"></td>
+      <td><input class="button is-small is-link is-light" type="submit" value="ADD" v-on:click = "addExercise(exercise[index-1],time[index-1],calories[index-1])"></td>
     </tr>
   </tbody>
 </table>
@@ -47,14 +47,14 @@
                 addworkoutpage,createworkout
         },
         methods : {
-               async addExercise() {
+               async addExercise(e,t,c) {
                   console.log("Hello");
                   try {
-                      console.log(this.exercise[0]);
-                      console.log(this.time[0]);
-                      console.log(this.calories[0]);
+                      console.log(e);
+                      console.log(t);
+                      console.log(c);
                       console.log("Inside addrees is"+this.$store.state.user);
-                      await updateUserExercise(this.exercise[0],this.time[0],this.calories[0],this.$store.state.user);
+                      await updateUserExercise(e,t,c,this.$store.state.user);
                   } catch (error) {
                       this.error = error;
                   }

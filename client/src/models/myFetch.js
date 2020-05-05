@@ -4,6 +4,8 @@ const api_root = "http://localhost:3000";
 let result;
 const Exercise=[];
 const Time=[];
+const TimeSpent=[];
+const Calories=[];
 async function myFetch(url, data){
     console.log(url);
     console.log(data);
@@ -60,16 +62,18 @@ async function getExercise(url){
         .then((response) => {
             console.log('res: ' + JSON.stringify(response));
             console.log(Object.keys(response[0].exercise).length);
-            const length=Object.keys(response[0].exercise).length;
+            const length=Object.keys(response[0].user).length;
             //result=JSON.stringify(response);
             for (var i = 0; i < length; i++) {
                    console.log("madam is"+JSON.stringify(response[0].exercise["exercise"+i].Exercise));
-                   Exercise[i]=JSON.stringify(response[0].exercise["exercise"+i].Exercise);
-                   Time[i]=JSON.stringify(response[0].exercise["exercise"+i].Time);
+                   Exercise[i]=JSON.stringify(response[0].exercise);
+                   //TimeSpent[i]=JSON.stringify(response[0].exercise["exercise"+i].Time);
+                   //Calories[i]=JSON.stringify(response[0].exercise["exercise"+i].Calories);
+                   //Time[i]=JSON.stringify(response[0].exercise["exercise"+i].Date);
                    console.log(Exercise);
            }
         })
         console.log("Exercise is"+Exercise);
-    return [Exercise,Time];
+    return Exercise;
 } 
 export {myFetch,myUpdate,myExercise,getExercise};

@@ -24,7 +24,7 @@
         </div>
         <div class="field">
         <p class="control">
-            <button class="button is-success">
+            <button class="button is-success" >
             Login
             </button>
         </p>
@@ -34,6 +34,7 @@
 <script>
 import { Login } from "../models/Users";
 import {mapState,mapMutations} from 'vuex'
+import {onClick} from "../views/Today"
 export default {
     data(){
         return {
@@ -51,14 +52,16 @@ export default {
                 if(user!=null){
                    this.$store.state.user=this.email;
                    this.$router.push('/Today');
+                   document.getElementsByTagName("li")[0].className="is-active";
                 }else{
                     alert("Sorry,You don't have the account to login,Please Sign up");
                     this.$router.push('/SignUp');
                 }
-                
+                console.log("outside is"+document.getElementsByTagName("a"));
             } catch (error) {
                 this.error = error;
             }
+            console.log("outside is"+document);
         }
     }
 }
