@@ -1,7 +1,10 @@
 <template>
   <form class="container form-down" @submit.prevent="login">
-      <div class="title is-4">
-        <p>Please Login with your credentials</p>
+      
+        <div class="columns hero is-primary">
+            <div class="column is-full title is-5 is-bold">
+               <p>Please Login with your credentials</p>
+             </div>
       </div>  
       <div class="field">
         <p class="control has-icons-left has-icons-right">
@@ -24,7 +27,7 @@
         </div>
         <div class="field">
         <p class="control">
-            <button class="button is-success" >
+            <button class="button is-success is-medium" >
             Login
             </button>
         </p>

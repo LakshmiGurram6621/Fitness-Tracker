@@ -9,6 +9,8 @@ import "bulma"
 //Importing font awesome for Icons
 import '@fortawesome/fontawesome-free/css/all.css'
 import store from '/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/router/store.js'
+import ToggleButton from 'vue-js-toggle-button'
+Vue.use(ToggleButton);
 //Creating Vue Instance
 Vue.config.productionTip = false;
 new Vue({

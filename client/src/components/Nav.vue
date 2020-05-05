@@ -7,25 +7,25 @@
             <li  v-on:click="onClick">
                 <router-link to="/Today">|
                    <span class="icon is-small"><i class="fas fa-tasks" aria-hidden="true"></i></span>
-                    <span>TODAY</span>
+                   <h1 class="title is-5"><span>TODAY</span></h1>
                 </router-link>      
             </li>
             <li v-on:click="onClick">
                <router-link to="/Plans">
                   <span class="icon is-small"><i class="fas fa-h-square" aria-hidden="true"></i></span>
-                  <span>PLANS</span>
+                  <h1 class="title is-5"><span>PLANS</span></h1>
               </router-link>
            </li>
            <li v-on:click="onClick">
               <a>
                 <span class="icon is-small"><i class="far fa-spinner" aria-hidden="true"></i></span>
-                <span>PROGRESS</span>
+                <h1 class="title is-5"><span>PROGRESS</span></h1>
               </a>
             </li>
             <li v-on:click="onClick">
               <a>
                 <span class="icon is-small"><i class="far fa-user" aria-hidden="true"></i></span>
-                <span>Account</span>
+                <h1 class="title is-5"><span>Account</span></h1>
              </a>
            </li>
         </ul>

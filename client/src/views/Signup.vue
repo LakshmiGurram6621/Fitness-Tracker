@@ -1,7 +1,7 @@
 <template>
   <form class="container"  @submit.prevent="signup">
         <div class="field">
-          <label class="label">Name</label>
+           <label class="label">Name</label>
           <div class="control">
                <input class="input" type="text" placeholder="e.g Alex Smith" v-model="name">
           </div>
@@ -30,7 +30,7 @@
         </div>
         <div class="field">
           <p class="control">
-            <button class="button is-success">
+            <button class="button is-success is-normal">
             Signup
             </button>
         </p>

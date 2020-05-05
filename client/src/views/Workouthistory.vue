@@ -1,14 +1,14 @@
 <template>
     <div class="content">
-    <ul>
+    <!-- <ul>
         {{exercise}}
         <li v-for="i in exercise">
             {{i.Exercise}}  {{i.Time}} {{i.Calories}} {{i.Date}}
        </li>  
-    </ul>     
+    </ul>      -->
   <table class="table">
   <thead>
-    <tr>
+    <tr title is-5>
       <th>Excercise</th>
       <th>Time</th>
       <th>Calories</th>
@@ -16,7 +16,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="index in exercise" v-bind:key="index">
+    <tr class="subtitle is-5" v-for="index in exercise" v-bind:key="index">
       <td>{{index.Exercise}}</td> 
       <th>{{index.Time}}</th>
       <td>{{index.Calories}}</td>
@@ -24,7 +24,12 @@
     </tr>
   </tbody>
 </table>
-
+<br>
+<br>
+ <div id="email">
+   <a class="title is-6">share with friends </a>
+   <toggle-button @change="sendMail" >share with friends</toggle-button>
+ </div> 
 </div>
 </template>
 <script>
@@ -36,6 +41,7 @@ export default {
                 exercise:[],
                 value1:[],
                 limit:"",
+                user:"",
                 }
             },   
     created: function(){
@@ -49,6 +55,7 @@ export default {
                 if(this.$store.state.user){
                    console.log("user is"+this.$store.state.user);   
                    finalreuslt=await fetchExercise(this.$store.state.user);
+                   this.user=this.$store.state.user;
                    console.log("Here result issss"+finalreuslt);
                    console.log("final result is"+finalreuslt[0].length);
                    console.log("final result is wrong"+finalreuslt[0]);
@@ -73,12 +80,32 @@ export default {
                 //     }
                 this.exercise=finalreuslt;
                 this.exercise=JSON.parse(this.exercise);
+                }else{
+                       alert("Please register with our App,so that you can track your Exercises");
                 }
-                
                 
             } catch (error) {
                 this.error = error;
             }
+        },
+        sendMail(){
+               //alert("calling");
+               var label = document.createElement("label");
+               var input=document.createElement("input");
+               label.appendChild(document.createTextNode("Enter Email Address"));
+               input.setAttribute("id","emailaddress");
+               document.getElementById("email").appendChild(label);
+               document.getElementById("email").appendChild(input);
+               input.onkeyup = function(e){
+                          if(e.keyCode === 13){
+                              e.preventDefault(); // Ensure it is only this code that rusn
+                              alert(document.getElementById("emailaddress").value);
+                     }
+                }
+                
+               if(this.$store.state.user){
+                         console.log("working");
+               }
         }
     }
 }        
