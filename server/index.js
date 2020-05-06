@@ -16,8 +16,8 @@ app
     .get('/', (req, res) => res.send('Express JS is working!') )
     .use('/users', usersModel)
     .use('/exercise', exerciseModel)
+    .use('/sendmail',mailModel)
     
-
 app.listen(3000,()=>{
     console.log("Im listening to this port" );
 });

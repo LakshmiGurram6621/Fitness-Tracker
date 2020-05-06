@@ -76,4 +76,14 @@ async function getExercise(url){
         console.log("Exercise is"+Exercise);
     return Exercise;
 } 
-export {myFetch,myUpdate,myExercise,getExercise};
+
+async function sendemail(url){
+    console.log(url);
+    let response;
+        console.log(api_root + url);
+        console.log("My sendemail method is calling");
+        await fetch(api_root + url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.  
+        })   
+}
+export {myFetch,myUpdate,myExercise,getExercise,sendemail};
