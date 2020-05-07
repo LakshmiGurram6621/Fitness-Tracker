@@ -36,6 +36,7 @@ router
                 fs.writeFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/exercise.txt',JSON.stringify(Exercise));
                 res.send(Exercise);
             }
+        fs.closeSync(rawdata);   
     })    
     .get('/:User',(req,res)=>{
         userCheck=ExistingUser(req.params.User);

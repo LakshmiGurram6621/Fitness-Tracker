@@ -1,1 +1,1 @@
-[{"user":{"Email":"lakshmi@gmail.com"},"exercise":{"exercise0":{"Exercise":"yoga","Time":"10","Calories":"10","Date":"WedMay06"}}}]
+[{"user":{"Email":"lakshmi@gmail.com"},"exercise":{"exercise0":{"Exercise":"yoga","Time":"10","Calories":"10","Date":"WedMay06"},"exercise1":{"Exercise":"swimming","Time":"20","Calories":"20","Date":"ThuMay07"}}},{"user":{"Email":"alex@gmail.com"},"exercise":{"exercise0":{"Exercise":"swimming","Time":"20","Calories":"20","Date":"ThuMay07"}}}]

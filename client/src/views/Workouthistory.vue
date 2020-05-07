@@ -93,10 +93,13 @@ export default {
                              email=document.getElementById("emailaddress").value;
                              alert(email);
                       }
-                 }
-               
-              }else{
-                alert("You have to be a registered user to use this functionality");
+                 } 
+              }else if(this.user=" "){
+                      alert("You have to be a registered user to use this functionality");
+                      var label = document.createElement("label");
+                      label.appendChild(document.createTextNode("You have to be a registered user to use this functionality"));
+                      document.getElementsByTagName('body').appendChild(label);
+                      
               }
         },
         async sentMail() {
