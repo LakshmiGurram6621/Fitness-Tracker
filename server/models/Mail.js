@@ -35,7 +35,7 @@ router
         //const user=req.params.user;
         const user1=Exercise.filter(exercise=>exercise.user.Email === req.params.user1);
         //user=JSON.stringify(user);  
-        console.log(user1);  
+        console.log("user in mail implementation is"+user1);  
         var count = Object.keys(user1[0].exercise).length;
         console.log(count);
         console.log("user is"+JSON.stringify(user1[0].exercise));  

@@ -1,1 +1,1 @@
-[]
+[{"user":{"Email":"lakshmi@gmail.com"},"exercise":{"exercise0":{"Exercise":"yoga","Time":"10","Calories":"10","Date":"WedMay06"}}}]
