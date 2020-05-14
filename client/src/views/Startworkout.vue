@@ -40,9 +40,9 @@
 
 </template>
 <script>
-    import addworkoutpage from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Addworkout.vue"
+    import addworkoutpage from "../views/Addworkout"
     import {mapGetters,mapState,mapMutations} from 'vuex'
-    import createworkout from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Createworkout.vue"
+    import createworkout from "../views/Createworkout"
     import { updateUserExercise } from "../models/UpdateUserExercise";
     export default{
         computed: {

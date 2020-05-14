@@ -45,7 +45,7 @@
 </template>
 <script>
   import {mapState,mapMutations} from 'vuex'
-  import createworkoutMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Createworkout.vue"
+  import createworkoutMenu from "../views/Createworkout"
   import {getExerciseName} from "../models/GetExerciseName";
   export default {
       computed : {

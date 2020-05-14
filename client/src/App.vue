@@ -11,7 +11,7 @@
 
 //Importing and exporting the feature so that we can use it in APP module
 <script>
-   import Mynav from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/components/Nav.vue";
+   import Mynav from "../src/components/Nav";
    export default{
         components:{
                   Mynav

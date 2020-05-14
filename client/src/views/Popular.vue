@@ -55,7 +55,7 @@
   </div>
 </template>
 <script>
-   import AvailableplansMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Availableplans.vue";
+   import AvailableplansMenu from "../views/Availableplans";
    export default{
         components:{
                   AvailableplansMenu
