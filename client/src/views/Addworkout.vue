@@ -11,7 +11,7 @@
       <div class="field">
        <section>
           <p class="content"><b>Find Existing Exercise:</b> {{ selected }}</p>
-           <b-field label="Find a JS framework">
+           <b-field label="Find a Exercise Name">{{data[0]}}
             <b-autocomplete
                 rounded
                 v-model="name"
@@ -68,7 +68,9 @@
       },
       computed: {
             filteredDataArray() {
+                console.log("Calling filtered method"); 
                 return this.data.filter((option) => {
+                    console.log(option);
                     return option
                         .toString()
                         .toLowerCase()
@@ -83,7 +85,12 @@
                       console.log("get Exercise name is");
                       const result=await getExerciseName();
                       console.log("get Exercise name is"+result);
-                      this.data=result;
+                      for(var i=0;i<result.length;i++){
+                           this.data.push(result[i]);
+                      }
+                     // this.data=result;
+                      console.log("Thsi data is"+this.data);
+                      this.filteredDataArray();
                   } catch (error) {
                       this.error = error;
                   }

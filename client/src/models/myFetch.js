@@ -101,6 +101,7 @@ async function getexerciseName(url){
             //console.log('res: ' + JSON.stringify(response));
             //ExerciseName=JSON.stringify(response);
             console.log('res: ' + response);
+            //console.log('res: ' + response.data);
             for (var i = 0; i < response.length; i++) {
                 console.log(response[i]);
                 ExerciseName[i] =response[i];

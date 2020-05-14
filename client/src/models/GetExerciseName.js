@@ -3,6 +3,6 @@ import {getexerciseName} from "./myFetch";
 export async function getExerciseName() {
     console.log("coming here too");
     let ExerciseName= await getexerciseName('/getExercise');
-    console.log("rhere Exercise is"+Exercise);
+    console.log("rhere Exercise is"+ExerciseName);
     return ExerciseName;
 }
