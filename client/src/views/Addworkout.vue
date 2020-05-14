@@ -11,11 +11,11 @@
       <div class="field">
        <section>
           <p class="content"><b>Find Existing Exercise:</b> {{ selected }}</p>
-           <b-field label="Find a Exercise Name">{{data[0]}}
+           <b-field label="Find a Exercise Name">
             <b-autocomplete
                 rounded
                 v-model="name"
-                :data="getExercise"
+                :data="filteredDataArray"
                 placeholder="e.g. yoga"
                 icon="magnify"
                 clearable
@@ -69,6 +69,7 @@
       computed: {
             filteredDataArray() {
                 console.log("Calling filtered method"); 
+                this.getExercise();
                 return this.data.filter((option) => {
                     console.log(option);
                     return option
@@ -76,25 +77,7 @@
                         .toLowerCase()
                         .indexOf(this.name.toLowerCase()) >= 0
                 })
-            },
-            async getExercise() {
-                  console.log("Hello");
-                  //this.isToggled = !this.isToggled;
-                  //console.log(isToggled);
-                  try {
-                      console.log("get Exercise name is");
-                      const result=await getExerciseName();
-                      console.log("get Exercise name is"+result);
-                      for(var i=0;i<result.length;i++){
-                           this.data.push(result[i]);
-                      }
-                     // this.data=result;
-                      console.log("Thsi data is"+this.data);
-                      this.filteredDataArray();
-                  } catch (error) {
-                      this.error = error;
-                  }
-            }        
+            },                 
         },
        methods:{
           ...mapMutations([
@@ -130,7 +113,24 @@
              this.addexercise='';
              this.addcalories='';
           },
-          
+        async getExercise() {
+                  console.log("Hello");
+                  //this.isToggled = !this.isToggled;
+                  //console.log(isToggled);
+                  try {
+                      console.log("get Exercise name is");
+                      const result=await getExerciseName();
+                      console.log("get Exercise name is"+result);
+                      for(var i=0;i<result.length;i++){
+                           this.data.push(result[i]);
+                      }
+                     // this.data=result;
+                      console.log("Thsi data is"+this.data);
+                      return;
+                  } catch (error) {
+                      this.error = error;
+                  }
+            }  
       }
   } 
 </script>
