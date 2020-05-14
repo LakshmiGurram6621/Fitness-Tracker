@@ -11,6 +11,13 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import store from '/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/router/store.js'
 import ToggleButton from 'vue-js-toggle-button'
 Vue.use(ToggleButton);
+//For auto complete feature
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+
+Vue.use(Buefy)
+import vSelect from 'vselect-component'
+Vue.use(vSelect)
 //Creating Vue Instance
 Vue.config.productionTip = false;
 new Vue({

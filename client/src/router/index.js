@@ -13,6 +13,7 @@ import Login from '../views/Login.vue'
 import Addworkout from '../views/Addworkout.vue'
 import Startworkout from '../views/Startworkout.vue'
 import SignUp from '../views/Signup.vue'
+import About from '../views/About.vue'
 
 //Creating vue object and creating path for every vue module
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ export default new VueRouter({
         path: '/',
         name: 'Home',
         component: Home
+      },
+      {
+        path: '/About',
+        name: 'About',
+        component: About
       },
       {
         path: '/Today',

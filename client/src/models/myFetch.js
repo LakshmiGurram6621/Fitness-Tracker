@@ -6,6 +6,7 @@ const Exercise=[];
 const Time=[];
 const TimeSpent=[];
 const Calories=[];
+const ExerciseName=[];
 async function myFetch(url, data){
     console.log(url);
     console.log(data);
@@ -86,4 +87,27 @@ async function sendemail(url){
             method: 'POST', // *GET, POST, PUT, DELETE, etc.  
         })   
 }
-export {myFetch,myUpdate,myExercise,getExercise,sendemail};
+
+async function getexerciseName(url){
+    console.log(url);
+   
+        console.log(api_root + url);
+        await fetch(api_root + url, {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.  
+        }).then(res => {
+            return res.json()
+          })
+        .then((response) => {
+            //console.log('res: ' + JSON.stringify(response));
+            //ExerciseName=JSON.stringify(response);
+            console.log('res: ' + response);
+            for (var i = 0; i < response.length; i++) {
+                console.log(response[i]);
+                ExerciseName[i] =response[i];
+            }
+            console.log("result is"+ExerciseName);
+        })
+        console.log("Exercise name is"+ExerciseName);
+    return ExerciseName;
+} 
+export {myFetch,myUpdate,myExercise,getExercise,sendemail,getexerciseName};

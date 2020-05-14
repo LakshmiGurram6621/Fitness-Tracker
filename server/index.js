@@ -3,6 +3,7 @@ const app=express();
 const usersModel = require('./models/Users');
 const exerciseModel = require('./models/Exercise');
 const mailModel = require('./models/Mail');
+const getExercise = require('./models/GetExerciseName');
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
@@ -17,6 +18,7 @@ app
     .use('/users', usersModel)
     .use('/exercise', exerciseModel)
     .use('/sendmail',mailModel)
+    .use('/getExercise',getExercise)
     
 app.listen(3000,()=>{
     console.log("Im listening to this port" );

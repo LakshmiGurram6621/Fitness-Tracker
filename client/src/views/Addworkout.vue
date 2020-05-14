@@ -9,6 +9,23 @@
       </div>
       <br>
       <div class="field">
+       <section>
+          <p class="content"><b>Find Existing Exercise:</b> {{ selected }}</p>
+           <b-field label="Find a JS framework">
+            <b-autocomplete
+                rounded
+                v-model="name"
+                :data="getExercise"
+                placeholder="e.g. yoga"
+                icon="magnify"
+                clearable
+                @select="option => selected = option">
+                <template slot="empty">No results found</template>
+            </b-autocomplete>
+        </b-field>
+    </section>
+      </div>  
+      <div class="field">
          <label class="label">Time To Spent*</label>
          <div class="control">
            <input class="input is-primary column is-5" type="text" v-model="addtime" @change="addTime(addtime)" placeholder="Duration of the time to spent on the exercise">
@@ -29,6 +46,7 @@
 <script>
   import {mapState,mapMutations} from 'vuex'
   import createworkoutMenu from "/Users/lakshmi/Desktop/Web practice/Fitness Tracker/client/src/views/Createworkout.vue"
+  import {getExerciseName} from "../models/GetExerciseName";
   export default {
       computed : {
              ...mapState([
@@ -40,12 +58,38 @@
                 addexercise:'',
                 addtime:'',
                 addcalories:'',
+                name: '',
+                selected: null,
+                data:[]
         }
       },
       components:{
           createworkoutMenu
       },
-      methods:{
+      computed: {
+            filteredDataArray() {
+                return this.data.filter((option) => {
+                    return option
+                        .toString()
+                        .toLowerCase()
+                        .indexOf(this.name.toLowerCase()) >= 0
+                })
+            },
+            async getExercise() {
+                  console.log("Hello");
+                  //this.isToggled = !this.isToggled;
+                  //console.log(isToggled);
+                  try {
+                      console.log("get Exercise name is");
+                      const result=await getExerciseName();
+                      console.log("get Exercise name is"+result);
+                      this.data=result;
+                  } catch (error) {
+                      this.error = error;
+                  }
+            }        
+        },
+       methods:{
           ...mapMutations([
             'ADD_Time','ADD_Excercise','ADD_Calories','DELETE_Excercise','DELETE_Time','DELETE_Calories'
           ]),
@@ -78,7 +122,8 @@
              this.addtime=''; 
              this.addexercise='';
              this.addcalories='';
-          }
+          },
+          
       }
   } 
 </script>
