@@ -1,8 +1,10 @@
 const express = require('express')
 var nodemailer = require('nodemailer');
+var path = require('path');
 const router = express.Router();
 const fs=require('fs');
-let rawdata = fs.readFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/exercise.txt');
+console.log("Directory name is"+path.join(__dirname,"../models/exercise.txt"));
+let rawdata = fs.readFileSync(path.join(__dirname,"../models/exercise.txt"));
 const Exercise = JSON.parse(rawdata);
 var transporter = nodemailer.createTransport({
   service: 'gmail',

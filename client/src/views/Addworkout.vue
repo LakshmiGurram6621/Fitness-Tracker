@@ -1,5 +1,5 @@
 <template>
-  <div id="addworkout">
+  <div id="addworkout" class="scroller">
       <createworkoutMenu></createworkoutMenu>
       <div class="field">
          <label class="label">Exercise Name*</label>
@@ -134,3 +134,10 @@
       }
   } 
 </script>
+<style scoped>
+ .scroller {
+            overflow:scroll;
+            width :1250px;
+            height: 650px;      
+}
+</style>

@@ -1,7 +1,8 @@
 const express = require('express');
 const fs=require('fs');
 const router = express.Router();
-let rawdata = fs.readFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt');
+var path = require('path');
+let rawdata = fs.readFileSync(path.join(__dirname,"../models/users.txt"));
 const Users = JSON.parse(rawdata);
 
 router
@@ -26,7 +27,7 @@ router
             }
             console.log("function is calling1");
             Users.push(Newuser);
-            fs.writeFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/users.txt',JSON.stringify(Users));
+            fs.writeFileSync(path.join(__dirname,"../models/users.txt"),JSON.stringify(Users));
             res.send(Users);
     })  
 module.exports = router

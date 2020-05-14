@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router();
+var path = require('path');
 const fs=require('fs');
-let rawdata = fs.readFileSync('/Users/lakshmi/Desktop/Web practice/Fitness Tracker/server/models/exercise.txt');
+let rawdata = fs.readFileSync(path.join(__dirname,"../models/exercise.txt"));
 const Exercise = JSON.parse(rawdata);
 router
     .get('/',(req,res)=>{
