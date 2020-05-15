@@ -1,11 +1,13 @@
 Fitness Tracker Application
 
+
 Features:
 1.User can register with our App
 2.Can Create Exercises with or with out account
 3.Can see existing Exercises with or with out account
 4.Existing users can see past or present exercises
 4.Can share with friends(Present update,it will share the JSON object to your friend)
+
 
 For running instructions:
 for cloning project to your local workspace:git clone https://github.com/LakshmiGurram6621/Fitness-Tracker.git
@@ -22,6 +24,13 @@ then
 
 For client running --->cd client then npm run serve(if npm is not recongnizing then install modules with npm install then npm run serve)
 For Server running ---->cd server then npm run dev
+
+
+
+For Testing
+Existing user-->1)username: lakshmi@gmail.com. ,password:1234(password can be anything,I'm authenticating email address only)
+
+
 
 Implementation Details:
 
